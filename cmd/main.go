@@ -7,9 +7,9 @@ import (
 	"os"
 	"time"
 
-	"github.com/spf13/cobra"
 	"github.com/kelleyblackmore/go-transformer"
 	"github.com/kelleyblackmore/go-transformer/pkg/models"
+	"github.com/spf13/cobra"
 )
 
 var (
@@ -51,7 +51,7 @@ func classifyCmd() *cobra.Command {
 		Args:  cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			text := args[0]
-			
+
 			ctx, cancel := context.WithTimeout(context.Background(), timeout)
 			defer cancel()
 
@@ -99,7 +99,7 @@ func generateCmd() *cobra.Command {
 		Args:  cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			prompt := args[0]
-			
+
 			ctx, cancel := context.WithTimeout(context.Background(), timeout)
 			defer cancel()
 

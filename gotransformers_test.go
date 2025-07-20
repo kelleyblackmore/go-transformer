@@ -20,7 +20,7 @@ func TestNewHFModel(t *testing.T) {
 	if info.Name != "test-model" {
 		t.Errorf("Expected model name to be 'test-model', got %s", info.Name)
 	}
-	
+
 	if info.Provider != "huggingface" {
 		t.Errorf("Expected provider to be 'huggingface', got %s", info.Provider)
 	}
@@ -29,13 +29,13 @@ func TestNewHFModel(t *testing.T) {
 func TestNewHFModelWithToken(t *testing.T) {
 	token := "test-token-12345"
 	model := NewHFModelWithToken("test-model", token)
-	
+
 	// Type assertion to access the underlying HFModel
 	hfModel, ok := model.(*api.HFModel)
 	if !ok {
 		t.Fatal("Expected *api.HFModel type")
 	}
-	
+
 	if hfModel.APIToken != token {
 		t.Errorf("Expected API token to be %s, got %s", token, hfModel.APIToken)
 	}
@@ -46,7 +46,7 @@ func TestQuickClassify_MockServer(t *testing.T) {
 	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
 		w.WriteHeader(http.StatusOK)
-		w.Write([]byte(`[{"label": "POSITIVE", "score": 0.9995}]`))
+		_, _ = w.Write([]byte(`[{"label": "POSITIVE", "score": 0.9995}]`))
 	}))
 	defer server.Close()
 
@@ -77,7 +77,7 @@ func TestQuickGenerate_MockServer(t *testing.T) {
 	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
 		w.WriteHeader(http.StatusOK)
-		w.Write([]byte(`[{"generated_text": "Hello world! This is a test of text generation."}]`))
+		_, _ = w.Write([]byte(`[{"generated_text": "Hello world! This is a test of text generation."}]`))
 	}))
 	defer server.Close()
 

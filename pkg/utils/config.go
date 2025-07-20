@@ -17,7 +17,7 @@ type Config struct {
 func DefaultConfig() *Config {
 	homeDir, _ := os.UserHomeDir()
 	cacheDir := filepath.Join(homeDir, ".cache", "gotransformers")
-	
+
 	return &Config{
 		HuggingFaceToken: getHuggingFaceToken(),
 		DefaultTimeout:   30 * time.Second,
@@ -38,11 +38,11 @@ func getHuggingFaceToken() string {
 
 // ModelConfig represents configuration for a specific model
 type ModelConfig struct {
-	Name         string            `json:"name"`
-	Provider     string            `json:"provider"`     // "huggingface", "onnx", "gguf"
-	Path         string            `json:"path,omitempty"` // Local path for ONNX/GGUF models
-	Parameters   map[string]interface{} `json:"parameters,omitempty"`
-	TokenizerPath string           `json:"tokenizer_path,omitempty"`
+	Name          string                 `json:"name"`
+	Provider      string                 `json:"provider"`       // "huggingface", "onnx", "gguf"
+	Path          string                 `json:"path,omitempty"` // Local path for ONNX/GGUF models
+	Parameters    map[string]interface{} `json:"parameters,omitempty"`
+	TokenizerPath string                 `json:"tokenizer_path,omitempty"`
 }
 
 // PopularModels contains configurations for commonly used models
