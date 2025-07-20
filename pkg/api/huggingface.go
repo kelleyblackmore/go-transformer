@@ -10,7 +10,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/kris/gotransformers/pkg/models"
+	"github.com/kelleyblackmore/go-transformer/pkg/models"
 	"github.com/tidwall/gjson"
 )
 
@@ -104,7 +104,7 @@ func (hf *HFModel) Generate(ctx context.Context, prompt string, options *models.
 	// Add generation parameters if provided
 	if options != nil {
 		parameters := make(map[string]interface{})
-		
+
 		if options.MaxLength > 0 {
 			parameters["max_length"] = options.MaxLength
 		}
@@ -154,7 +154,7 @@ func (hf *HFModel) Generate(ctx context.Context, prompt string, options *models.
 // makeRequest makes an HTTP request to the Hugging Face API
 func (hf *HFModel) makeRequest(ctx context.Context, method, endpoint string, payload interface{}) (string, error) {
 	var body io.Reader
-	
+
 	if payload != nil {
 		jsonData, err := json.Marshal(payload)
 		if err != nil {

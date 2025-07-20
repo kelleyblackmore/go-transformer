@@ -1,4 +1,4 @@
-module github.com/kris/gotransformers
+module github.com/kelleyblackmore/go-transformer
 
 go 1.21
 

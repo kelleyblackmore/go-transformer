@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/kris/gotransformers"
-	"github.com/kris/gotransformers/pkg/models"
+	"github.com/kelleyblackmore/go-transformer"
+	"github.com/kelleyblackmore/go-transformer/pkg/models"
 )
 
 func main() {

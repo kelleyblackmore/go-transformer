@@ -6,23 +6,23 @@ import "context"
 type Task string
 
 const (
-	TaskTextGeneration    Task = "text-generation"
-	TaskTextClassification Task = "text-classification"
+	TaskTextGeneration      Task = "text-generation"
+	TaskTextClassification  Task = "text-classification"
 	TaskTokenClassification Task = "token-classification"
-	TaskQuestionAnswering Task = "question-answering"
-	TaskFillMask         Task = "fill-mask"
-	TaskSummarization    Task = "summarization"
-	TaskTranslation      Task = "translation"
+	TaskQuestionAnswering   Task = "question-answering"
+	TaskFillMask            Task = "fill-mask"
+	TaskSummarization       Task = "summarization"
+	TaskTranslation         Task = "translation"
 )
 
 // Model represents a transformer model interface
 type Model interface {
 	// Classify performs text classification
 	Classify(ctx context.Context, text string) (*ClassificationResult, error)
-	
+
 	// Generate performs text generation
 	Generate(ctx context.Context, prompt string, options *GenerationOptions) (*GenerationResult, error)
-	
+
 	// GetModelInfo returns information about the model
 	GetModelInfo() *ModelInfo
 }
@@ -35,13 +35,13 @@ type ClassificationResult struct {
 
 // GenerationOptions configures text generation parameters
 type GenerationOptions struct {
-	MaxLength    int     `json:"max_length,omitempty"`
-	Temperature  float64 `json:"temperature,omitempty"`
-	TopP         float64 `json:"top_p,omitempty"`
-	TopK         int     `json:"top_k,omitempty"`
-	DoSample     bool    `json:"do_sample,omitempty"`
-	NumReturn    int     `json:"num_return_sequences,omitempty"`
-	Stream       bool    `json:"stream,omitempty"`
+	MaxLength   int     `json:"max_length,omitempty"`
+	Temperature float64 `json:"temperature,omitempty"`
+	TopP        float64 `json:"top_p,omitempty"`
+	TopK        int     `json:"top_k,omitempty"`
+	DoSample    bool    `json:"do_sample,omitempty"`
+	NumReturn   int     `json:"num_return_sequences,omitempty"`
+	Stream      bool    `json:"stream,omitempty"`
 }
 
 // GenerationResult represents the result of text generation

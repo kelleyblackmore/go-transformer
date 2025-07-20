@@ -3,17 +3,17 @@ package tokenizers
 // WordPieceTokenizer implements WordPiece tokenization algorithm
 // This is a placeholder for Phase 2 implementation
 type WordPieceTokenizer struct {
-	Vocab     map[string]int `json:"vocab"`
-	UNKToken  string         `json:"unk_token"`
-	MaxInputLength int       `json:"max_input_length"`
+	Vocab          map[string]int `json:"vocab"`
+	UNKToken       string         `json:"unk_token"`
+	MaxInputLength int            `json:"max_input_length"`
 }
 
 // NewWordPieceTokenizer creates a new WordPiece tokenizer
 // TODO: Implement in Phase 2
 func NewWordPieceTokenizer(vocabPath string) (*WordPieceTokenizer, error) {
 	return &WordPieceTokenizer{
-		Vocab:     make(map[string]int),
-		UNKToken:  "[UNK]",
+		Vocab:          make(map[string]int),
+		UNKToken:       "[UNK]",
 		MaxInputLength: 512,
 	}, nil
 }

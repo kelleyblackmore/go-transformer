@@ -3,7 +3,7 @@ package inference
 import (
 	"context"
 
-	"github.com/kris/gotransformers/pkg/models"
+	"github.com/kelleyblackmore/go-transformer/pkg/models"
 )
 
 // ONNXModel represents an ONNX-based transformer model
@@ -26,7 +26,7 @@ func NewONNXModel(modelPath, tokenizerPath string) (*ONNXModel, error) {
 // Classify performs text classification using ONNX Runtime
 // TODO: Implement in Phase 2
 func (om *ONNXModel) Classify(ctx context.Context, text string) (*models.ClassificationResult, error) {
-	// TODO: 
+	// TODO:
 	// 1. Load tokenizer
 	// 2. Tokenize input text
 	// 3. Run ONNX inference
@@ -37,7 +37,7 @@ func (om *ONNXModel) Classify(ctx context.Context, text string) (*models.Classif
 // Generate performs text generation using ONNX Runtime
 // TODO: Implement in Phase 2
 func (om *ONNXModel) Generate(ctx context.Context, prompt string, options *models.GenerationOptions) (*models.GenerationResult, error) {
-	// TODO: 
+	// TODO:
 	// 1. Load tokenizer
 	// 2. Tokenize prompt
 	// 3. Run autoregressive generation with ONNX

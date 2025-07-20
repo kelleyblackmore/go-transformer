@@ -5,8 +5,8 @@ package gotransformers
 import (
 	"context"
 
-	"github.com/kris/gotransformers/pkg/api"
-	"github.com/kris/gotransformers/pkg/models"
+	"github.com/kelleyblackmore/go-transformer/pkg/api"
+	"github.com/kelleyblackmore/go-transformer/pkg/models"
 )
 
 // NewHFModel creates a new Hugging Face model instance

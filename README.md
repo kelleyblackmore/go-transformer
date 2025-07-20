@@ -14,7 +14,7 @@ A Transformers-compatible library in Go for running transformer models with a fo
 ## 🚀 Installation
 
 ```bash
-go get github.com/kris/gotransformers
+go get github.com/kelleyblackmore/go-transformer
 ```
 
 ## 📖 Quick Start
@@ -29,7 +29,7 @@ import (
     "fmt"
     "log"
 
-    "github.com/kris/gotransformers"
+    "github.com/kelleyblackmore/go-transformer"
 )
 
 func main() {
@@ -243,4 +243,4 @@ Check out the `examples/` directory for more comprehensive usage examples:
 
 - 📧 Email: support@gotransformers.dev
 - 💬 Discord: [Join our community](https://discord.gg/gotransformers)
-- 🐛 Issues: [GitHub Issues](https://github.com/kris/gotransformers/issues)
+- 🐛 Issues: [GitHub Issues](https://github.com/kelleyblackmore/go-transformer/issues)
