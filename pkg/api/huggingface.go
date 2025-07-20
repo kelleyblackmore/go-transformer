@@ -10,7 +10,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/kris/gotransformers/pkg/models"
+	"github.com/kelleyblackmore/go-transformer/pkg/models"
 	"github.com/tidwall/gjson"
 )
 

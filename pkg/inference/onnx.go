@@ -3,7 +3,7 @@ package inference
 import (
 	"context"
 
-	"github.com/kris/gotransformers/pkg/models"
+	"github.com/kelleyblackmore/go-transformer/pkg/models"
 )
 
 // ONNXModel represents an ONNX-based transformer model

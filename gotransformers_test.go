@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/kris/gotransformers/pkg/api"
+	"github.com/kelleyblackmore/go-transformer/pkg/api"
 )
 
 func TestNewHFModel(t *testing.T) {

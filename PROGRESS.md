@@ -135,7 +135,7 @@ go build -o gotransformers ./cmd
 ./gotransformers generate "The future of AI"
 
 # Use in Go code
-go get github.com/kris/gotransformers
+go get github.com/kelleyblackmore/go-transformer
 ```
 
 **Phase 1 is 100% complete and ready for use! 🎉**
